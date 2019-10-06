@@ -22,6 +22,19 @@ namespace PortfolioTracking.Services
             _liveDateRepo = liveDateRepo;
         }
 
+        public List<PortfolioReport> GetPortfolioListByUserName(string userName)
+        {
+            return _dbRepo.Get<Portfolio>()
+                          .Where(p => p.UserProfile.UserName == userName)
+                          .Select(p => new PortfolioReport()
+                          {
+                              PortfolioID = p.PortfolioID,
+                              PortfolioName = p.PortfolioName,
+                              WhenCreated = p.WhenCreated
+                          })
+                          .ToList();
+        }
+
         public PortfolioReport GetPortfolioReportByPortfolioID(long portfolioID)
         {
             PortfolioReport reportResult = new PortfolioReport();
@@ -33,7 +46,7 @@ namespace PortfolioTracking.Services
             {
                 reportResult.PortfolioID = portfolio.PortfolioID;
                 reportResult.PortfolioName = portfolio.PortfolioName;
-                reportResult.AsOfDate = DateTime.Today;
+                reportResult.WhenCreated = portfolio.WhenCreated;
                 reportResult.ProfitReports = GroupProfitByTicker(portfolio.TradeHistories.ToList());
             }
             return reportResult;

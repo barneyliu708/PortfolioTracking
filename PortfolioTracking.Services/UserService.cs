@@ -2,6 +2,7 @@
 using PortfolioTracking.Infrastructure.DataAccess.Database;
 using PortfolioTracking.Infrastructure.DataAccess.Database.Models;
 using PortfolioTracking.Services.Interfaces;
+using System.Data.Entity;
 using System.Linq;
 
 namespace PortfolioTracking.Services
@@ -9,9 +10,9 @@ namespace PortfolioTracking.Services
     public class UserService : IUserService
     {
         private DbRepository _dbRepository;
-        public UserService(DbRepository dbRepositoy)
+        public UserService(DbContext dbcontext)
         {
-            _dbRepository = dbRepositoy;
+            _dbRepository = new DbRepository(dbcontext);
         }
 
         public UserDetails GetUserDetailsByUserName(string userName)

@@ -7,7 +7,7 @@ namespace PortfolioTracking.BusinessObjects
     {
         public long PortfolioID { get; set; }
         public string PortfolioName { get; set; }
-        public DateTime AsOfDate { get; set; }
+        public DateTime WhenCreated { get; set; }
         public List<ProfitReport> ProfitReports { get; set; }
     }
 }
