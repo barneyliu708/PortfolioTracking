@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 
 namespace PortfolioTracking.Infrastructure.DataAccess.LiveStockPrice.Dto
 {
@@ -11,5 +12,7 @@ namespace PortfolioTracking.Infrastructure.DataAccess.LiveStockPrice.Dto
 
         [JsonProperty("Global Quote")]
         public GlobalQuoteDto LatestPrice { get; set; }
+
+        public DateTime QuateTime { get; set; }
     }
 }

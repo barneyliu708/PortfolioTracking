@@ -11,6 +11,7 @@ namespace PortfolioTracking.Presentation.Views
 {
     public partial class MainView : Form, IMainView
     {
+        
         public MainView()
         {
             InitializeComponent();

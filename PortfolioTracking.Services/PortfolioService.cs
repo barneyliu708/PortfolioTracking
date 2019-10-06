@@ -1,4 +1,6 @@
-﻿using PortfolioTracking.BusinessObjects;
+﻿using log4net;
+using Newtonsoft.Json;
+using PortfolioTracking.BusinessObjects;
 using PortfolioTracking.Infrastructure.DataAccess.Database;
 using PortfolioTracking.Infrastructure.DataAccess.Database.Models;
 using PortfolioTracking.Infrastructure.DataAccess.LiveStockPrice;
@@ -13,6 +15,8 @@ namespace PortfolioTracking.Services
 {
     public class PortfolioService : IPortfolioService
     {
+        private static readonly ILog _logger = LogManager.GetLogger(typeof(PortfolioService));
+
         private DbRepository _dbRepo;
         private ILiveDataRepository _liveDateRepo;
 
@@ -64,32 +68,33 @@ namespace PortfolioTracking.Services
 
         public List<ProfitReport> GroupProfitByTicker(List<TradeHistory> histories)
         {
-            return histories.GroupBy
-                             (
-                                 history => history.Ticker,
-                                 history => history,
-                                 (key, group) =>
-                                 {
-                                     StockPriceDto price = _liveDateRepo.GetLastStockPrice(key);
-                                     ProfitReport profit = new ProfitReport
-                                     {
-                                         Ticker = key,
-                                         AsOfDate = DateTime.Today,
-                                         Cost = CalculatePortfolioCost(group.ToList()),
-                                         Quantity = CalculatePortfolioQuantity(group.ToList()),
-                                         CurPrice = price.LatestPrice.ClosePrice,
-                                         PrePrice = price.LatestPrice.PrePrice
-                                     };
-                                     profit.MarketValue = profit.CurPrice * profit.Quantity;
-                                     profit.DailyProfit = (profit.CurPrice - profit.PrePrice) * profit.Quantity;
-                                     profit.InceptionProfit = profit.MarketValue != 0 ? profit.MarketValue - profit.Cost : 0;
+            List<ProfitReport> profitReports =  histories.GroupBy
+                                                (
+                                                    history => history.Ticker,
+                                                    history => history,
+                                                    (key, group) =>
+                                                    {
+                                                        StockPriceDto price = _liveDateRepo.GetLastStockPrice(key);
+                                                        ProfitReport profit = new ProfitReport
+                                                        {
+                                                            Ticker = key,
+                                                            AsOfDate = DateTime.Today,
+                                                            Cost = CalculatePortfolioCost(group.ToList()),
+                                                            Quantity = CalculatePortfolioQuantity(group.ToList()),
+                                                            CurPrice = price.LatestPrice.ClosePrice,
+                                                            PrePrice = price.LatestPrice.PrePrice
+                                                        };
+                                                        profit.MarketValue = profit.CurPrice * profit.Quantity;
+                                                        profit.DailyProfit = (profit.CurPrice - profit.PrePrice) * profit.Quantity;
+                                                        profit.InceptionProfit = profit.MarketValue != 0 ? profit.MarketValue - profit.Cost : 0;
 
-                                     return profit;
-                                 }
-
-                             )
-                             .OrderBy(p => p.Ticker)
-                             .ToList();
+                                                        return profit;
+                                                    }
+                                                
+                                                )
+                                                .OrderBy(p => p.Ticker)
+                                                .ToList();
+            return profitReports;
         }
 
         public List<PortfolioTradeHistory> GetTradeHistoriesByPortfolioID(long portfolioID)

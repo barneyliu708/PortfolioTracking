@@ -1,4 +1,5 @@
-﻿using PortfolioTracking.BusinessObjects;
+﻿using log4net;
+using PortfolioTracking.BusinessObjects;
 using PortfolioTracking.Presentation.Views;
 using PortfolioTracking.Services;
 using PortfolioTracking.Services.Interfaces;
@@ -12,6 +13,8 @@ namespace PortfolioTracking.Presentation.Presenters
 {
     public class MainPresenter
     {
+        private static readonly ILog _logger = LogManager.GetLogger(typeof(MainPresenter));
+
         private IMainView _mainView;
         private IUserService _userService;
         private IPortfolioService _portfolioService;
@@ -25,6 +28,8 @@ namespace PortfolioTracking.Presentation.Presenters
             this._mainView.OnPortfolioSelected += OnPortfolioSelected;
 
             LoadUserProfile();
+
+            _logger.Info($"Main page load successfully");
         }
 
         public void LoadUserProfile()
