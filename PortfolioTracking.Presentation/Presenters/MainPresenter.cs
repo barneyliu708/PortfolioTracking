@@ -1,13 +1,9 @@
 ﻿using log4net;
 using PortfolioTracking.BusinessObjects;
 using PortfolioTracking.Presentation.Views;
-using PortfolioTracking.Services;
 using PortfolioTracking.Services.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PortfolioTracking.Presentation.Presenters
 {

@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
-using System.Reflection;
 
 namespace PortfolioTracking.Infrastructure.DataAccess.LiveStockPrice
 {
@@ -22,7 +21,7 @@ namespace PortfolioTracking.Infrastructure.DataAccess.LiveStockPrice
         {
             try
             {
-                // -- check if quote the same ticker price in past 30 seconds
+                // -- check if we quote the same ticker price in past 30 seconds
                 if (priceCache.ContainsKey(ticker) && DateTime.Now < priceCache[ticker].QuateTime.AddSeconds(30) && priceCache[ticker].LatestPrice.ClosePrice != 0)
                 {
                     _logger.Info($"price is found in the cache: {JsonConvert.SerializeObject(priceCache[ticker])}");

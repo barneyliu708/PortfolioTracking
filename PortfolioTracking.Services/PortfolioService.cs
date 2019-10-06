@@ -1,5 +1,4 @@
 ﻿using log4net;
-using Newtonsoft.Json;
 using PortfolioTracking.BusinessObjects;
 using PortfolioTracking.Infrastructure.DataAccess.Database;
 using PortfolioTracking.Infrastructure.DataAccess.Database.Models;

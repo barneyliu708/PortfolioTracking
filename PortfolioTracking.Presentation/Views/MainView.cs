@@ -1,8 +1,4 @@
 ﻿using PortfolioTracking.BusinessObjects;
-using PortfolioTracking.Infrastructure.DataAccess.Database;
-using PortfolioTracking.Infrastructure.DataAccess.LiveStockPrice;
-using PortfolioTracking.Services;
-using PortfolioTracking.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -15,13 +11,6 @@ namespace PortfolioTracking.Presentation.Views
         public MainView()
         {
             InitializeComponent();
-            //using(PortfolioDbContext dbcontext = new PortfolioDbContext())
-            //{
-            //    LiveDataRepository liveDataRepo = new LiveDataRepository();
-            //    IPortfolioService portfolioService = new PortfolioService(dbcontext, liveDataRepo);
-            //    var test = portfolioService.GetPortfolioReportByPortfolioID(1);
-            //}
-
         }
 
         public event EventHandler OnPortfolioSelected;
@@ -29,6 +18,13 @@ namespace PortfolioTracking.Presentation.Views
         private void MainView_Load(object sender, EventArgs e)
         {
 
+        }
+        private void PortfolioListBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (SeletedPortfolio != null)
+            {
+                OnPortfolioSelected(sender, e);
+            }
         }
 
         public string UserDisplayName
@@ -70,14 +66,6 @@ namespace PortfolioTracking.Presentation.Views
         public void LoadSelectedPortfolioTradeHistories(List<PortfolioTradeHistory> tradeHistories)
         {
             PortfolioTradeHistoryGridView.DataSource = tradeHistories;
-        }
-
-        private void PortfolioListBox_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (SeletedPortfolio != null)
-            {
-                OnPortfolioSelected(sender, e);
-            }
         }
     }
 }
