@@ -23,9 +23,9 @@ namespace PortfolioTracking.Presentation.Views
 
         }
 
-        public event EventHandler PortfolioSelected;
+        public event EventHandler OnPortfolioSelected;
 
-        private void MainView_Load(object sender, System.EventArgs e)
+        private void MainView_Load(object sender, EventArgs e)
         {
 
         }
@@ -55,10 +55,10 @@ namespace PortfolioTracking.Presentation.Views
             set { SelectedPortfolioNameLable.Text = value; }
         }
 
-        public string SelectedPortfolioWhenCreated
+        public DateTime SelectedPortfolioWhenCreated
         {
-            get { return SelectedPortfolioWhenCreatedLable.Text; }
-            set { SelectedPortfolioWhenCreatedLable.Text = value; }
+            get { return DateTime.Parse(SelectedPortfolioWhenCreatedLable.Text); }
+            set { SelectedPortfolioWhenCreatedLable.Text = value.ToString("dddd, dd MMMM yyyy"); }
         }
 
         public void LoadSelectedPortfolioProfits(List<ProfitReport> profits)
@@ -69,6 +69,14 @@ namespace PortfolioTracking.Presentation.Views
         public void LoadSelectedPortfolioTradeHistories(List<PortfolioTradeHistory> tradeHistories)
         {
             PortfolioTradeHistoryGridView.DataSource = tradeHistories;
+        }
+
+        private void PortfolioListBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (SeletedPortfolio != null)
+            {
+                OnPortfolioSelected(sender, e);
+            }
         }
     }
 }

@@ -8,7 +8,9 @@ namespace PortfolioTracking.Services.Interfaces
     {
         decimal CalculatePortfolioCost(List<TradeHistory> histories);
         long CalculatePortfolioQuantity(List<TradeHistory> histories);
+        List<PortfolioReport> GetPortfolioListByUserName(string userName);
         PortfolioReport GetPortfolioReportByPortfolioID(long portfolioID);
+        List<PortfolioTradeHistory> GetTradeHistoriesByPortfolioID(long portfolioID);
         List<ProfitReport> GroupProfitByTicker(List<TradeHistory> histories);
     }
 }

@@ -91,5 +91,20 @@ namespace PortfolioTracking.Services
                              .OrderBy(p => p.Ticker)
                              .ToList();
         }
+
+        public List<PortfolioTradeHistory> GetTradeHistoriesByPortfolioID(long portfolioID)
+        {
+            return _dbRepo.Get<TradeHistory>()
+                          .Where(t => t.Portfolio.PortfolioID == portfolioID)
+                          .Select(t => new PortfolioTradeHistory()
+                          {
+                              Ticker = t.Ticker,
+                              TradeDate = t.TradeDate,
+                              TradeAction = t.TradeAction.ToString(),
+                              Price = t.Price,
+                              Quantity = t.Quantity
+                          })
+                          .ToList();
+        }
     }
 }
