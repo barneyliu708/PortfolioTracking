@@ -3,3 +3,6 @@
  
 ## Getting Started
  Please set the project "PortfolioTracking.Presentation" as the startup project
+
+## Running the tests
+ Unit tests are in Test\ folder
