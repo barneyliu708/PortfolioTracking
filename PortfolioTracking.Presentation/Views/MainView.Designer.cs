@@ -36,23 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PortfolioProfitGridView = new System.Windows.Forms.DataGridView();
-            this.tickerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.asOfDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.curPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marketValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dailyProfitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inceptionProfitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profitReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PortfolioTradeHistoryGridView = new System.Windows.Forms.DataGridView();
-            this.tickerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tradeDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tradeActionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.portfolioTradeHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PortfolioListBox = new System.Windows.Forms.ListBox();
             this.WelcomeLable = new System.Windows.Forms.Label();
             this.SelectedPortfolioNameLable = new System.Windows.Forms.Label();
@@ -63,10 +47,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.tickerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tradeDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tradeActionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.portfolioTradeHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tickerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.asOfDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.curPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marketValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dailyProfitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inceptionProfitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profitReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PortfolioProfitGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profitReportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PortfolioTradeHistoryGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.portfolioTradeHistoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profitReportBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // PortfolioProfitGridView
@@ -116,75 +116,6 @@
             this.PortfolioProfitGridView.Size = new System.Drawing.Size(989, 173);
             this.PortfolioProfitGridView.TabIndex = 0;
             // 
-            // tickerDataGridViewTextBoxColumn
-            // 
-            this.tickerDataGridViewTextBoxColumn.DataPropertyName = "Ticker";
-            this.tickerDataGridViewTextBoxColumn.HeaderText = "Ticker";
-            this.tickerDataGridViewTextBoxColumn.Name = "tickerDataGridViewTextBoxColumn";
-            this.tickerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // asOfDateDataGridViewTextBoxColumn
-            // 
-            this.asOfDateDataGridViewTextBoxColumn.DataPropertyName = "AsOfDate";
-            this.asOfDateDataGridViewTextBoxColumn.HeaderText = "As of Date";
-            this.asOfDateDataGridViewTextBoxColumn.Name = "asOfDateDataGridViewTextBoxColumn";
-            this.asOfDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // curPriceDataGridViewTextBoxColumn
-            // 
-            this.curPriceDataGridViewTextBoxColumn.DataPropertyName = "CurPrice";
-            this.curPriceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.curPriceDataGridViewTextBoxColumn.Name = "curPriceDataGridViewTextBoxColumn";
-            this.curPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prePriceDataGridViewTextBoxColumn
-            // 
-            this.prePriceDataGridViewTextBoxColumn.DataPropertyName = "PrePrice";
-            this.prePriceDataGridViewTextBoxColumn.HeaderText = "Previous Price";
-            this.prePriceDataGridViewTextBoxColumn.Name = "prePriceDataGridViewTextBoxColumn";
-            this.prePriceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // marketValueDataGridViewTextBoxColumn
-            // 
-            this.marketValueDataGridViewTextBoxColumn.DataPropertyName = "MarketValue";
-            this.marketValueDataGridViewTextBoxColumn.HeaderText = "Market Value";
-            this.marketValueDataGridViewTextBoxColumn.Name = "marketValueDataGridViewTextBoxColumn";
-            this.marketValueDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dailyProfitDataGridViewTextBoxColumn
-            // 
-            this.dailyProfitDataGridViewTextBoxColumn.DataPropertyName = "DailyProfit";
-            this.dailyProfitDataGridViewTextBoxColumn.HeaderText = "Daily Profit";
-            this.dailyProfitDataGridViewTextBoxColumn.Name = "dailyProfitDataGridViewTextBoxColumn";
-            this.dailyProfitDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // inceptionProfitDataGridViewTextBoxColumn
-            // 
-            this.inceptionProfitDataGridViewTextBoxColumn.DataPropertyName = "InceptionProfit";
-            this.inceptionProfitDataGridViewTextBoxColumn.HeaderText = "Inception Profit";
-            this.inceptionProfitDataGridViewTextBoxColumn.MinimumWidth = 200;
-            this.inceptionProfitDataGridViewTextBoxColumn.Name = "inceptionProfitDataGridViewTextBoxColumn";
-            this.inceptionProfitDataGridViewTextBoxColumn.ReadOnly = true;
-            this.inceptionProfitDataGridViewTextBoxColumn.Width = 5;
-            // 
-            // profitReportBindingSource
-            // 
-            this.profitReportBindingSource.DataSource = typeof(PortfolioTracking.BusinessObjects.ProfitReport);
-            // 
             // PortfolioTradeHistoryGridView
             // 
             this.PortfolioTradeHistoryGridView.AutoGenerateColumns = false;
@@ -224,40 +155,6 @@
             this.PortfolioTradeHistoryGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.PortfolioTradeHistoryGridView.Size = new System.Drawing.Size(545, 184);
             this.PortfolioTradeHistoryGridView.TabIndex = 1;
-            // 
-            // tickerDataGridViewTextBoxColumn1
-            // 
-            this.tickerDataGridViewTextBoxColumn1.DataPropertyName = "Ticker";
-            this.tickerDataGridViewTextBoxColumn1.HeaderText = "Ticker";
-            this.tickerDataGridViewTextBoxColumn1.Name = "tickerDataGridViewTextBoxColumn1";
-            // 
-            // tradeDateDataGridViewTextBoxColumn
-            // 
-            this.tradeDateDataGridViewTextBoxColumn.DataPropertyName = "TradeDate";
-            this.tradeDateDataGridViewTextBoxColumn.HeaderText = "TradeDate";
-            this.tradeDateDataGridViewTextBoxColumn.Name = "tradeDateDataGridViewTextBoxColumn";
-            // 
-            // tradeActionDataGridViewTextBoxColumn
-            // 
-            this.tradeActionDataGridViewTextBoxColumn.DataPropertyName = "TradeAction";
-            this.tradeActionDataGridViewTextBoxColumn.HeaderText = "TradeAction";
-            this.tradeActionDataGridViewTextBoxColumn.Name = "tradeActionDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn1
-            // 
-            this.quantityDataGridViewTextBoxColumn1.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn1.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn1.Name = "quantityDataGridViewTextBoxColumn1";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // portfolioTradeHistoryBindingSource
-            // 
-            this.portfolioTradeHistoryBindingSource.DataSource = typeof(PortfolioTracking.BusinessObjects.PortfolioTradeHistory);
             // 
             // PortfolioListBox
             // 
@@ -362,6 +259,109 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Trade Histories";
             // 
+            // tickerDataGridViewTextBoxColumn1
+            // 
+            this.tickerDataGridViewTextBoxColumn1.DataPropertyName = "Ticker";
+            this.tickerDataGridViewTextBoxColumn1.HeaderText = "Ticker";
+            this.tickerDataGridViewTextBoxColumn1.Name = "tickerDataGridViewTextBoxColumn1";
+            // 
+            // tradeDateDataGridViewTextBoxColumn
+            // 
+            this.tradeDateDataGridViewTextBoxColumn.DataPropertyName = "TradeDate";
+            this.tradeDateDataGridViewTextBoxColumn.HeaderText = "TradeDate";
+            this.tradeDateDataGridViewTextBoxColumn.Name = "tradeDateDataGridViewTextBoxColumn";
+            // 
+            // tradeActionDataGridViewTextBoxColumn
+            // 
+            this.tradeActionDataGridViewTextBoxColumn.DataPropertyName = "TradeAction";
+            this.tradeActionDataGridViewTextBoxColumn.HeaderText = "TradeAction";
+            this.tradeActionDataGridViewTextBoxColumn.Name = "tradeActionDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn1
+            // 
+            this.quantityDataGridViewTextBoxColumn1.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn1.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn1.Name = "quantityDataGridViewTextBoxColumn1";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // portfolioTradeHistoryBindingSource
+            // 
+            this.portfolioTradeHistoryBindingSource.DataSource = typeof(PortfolioTracking.BusinessObjects.PortfolioTradeHistory);
+            // 
+            // tickerDataGridViewTextBoxColumn
+            // 
+            this.tickerDataGridViewTextBoxColumn.DataPropertyName = "Ticker";
+            this.tickerDataGridViewTextBoxColumn.HeaderText = "Ticker";
+            this.tickerDataGridViewTextBoxColumn.Name = "tickerDataGridViewTextBoxColumn";
+            this.tickerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // asOfDateDataGridViewTextBoxColumn
+            // 
+            this.asOfDateDataGridViewTextBoxColumn.DataPropertyName = "AsOfDate";
+            this.asOfDateDataGridViewTextBoxColumn.HeaderText = "As of Date";
+            this.asOfDateDataGridViewTextBoxColumn.Name = "asOfDateDataGridViewTextBoxColumn";
+            this.asOfDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // curPriceDataGridViewTextBoxColumn
+            // 
+            this.curPriceDataGridViewTextBoxColumn.DataPropertyName = "CurPrice";
+            this.curPriceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.curPriceDataGridViewTextBoxColumn.Name = "curPriceDataGridViewTextBoxColumn";
+            this.curPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prePriceDataGridViewTextBoxColumn
+            // 
+            this.prePriceDataGridViewTextBoxColumn.DataPropertyName = "PrePrice";
+            this.prePriceDataGridViewTextBoxColumn.HeaderText = "Previous Price";
+            this.prePriceDataGridViewTextBoxColumn.Name = "prePriceDataGridViewTextBoxColumn";
+            this.prePriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // marketValueDataGridViewTextBoxColumn
+            // 
+            this.marketValueDataGridViewTextBoxColumn.DataPropertyName = "MarketValue";
+            this.marketValueDataGridViewTextBoxColumn.HeaderText = "Market Value";
+            this.marketValueDataGridViewTextBoxColumn.Name = "marketValueDataGridViewTextBoxColumn";
+            this.marketValueDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dailyProfitDataGridViewTextBoxColumn
+            // 
+            this.dailyProfitDataGridViewTextBoxColumn.DataPropertyName = "DailyProfit";
+            this.dailyProfitDataGridViewTextBoxColumn.HeaderText = "Daily Profit";
+            this.dailyProfitDataGridViewTextBoxColumn.Name = "dailyProfitDataGridViewTextBoxColumn";
+            this.dailyProfitDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // inceptionProfitDataGridViewTextBoxColumn
+            // 
+            this.inceptionProfitDataGridViewTextBoxColumn.DataPropertyName = "InceptionProfit";
+            this.inceptionProfitDataGridViewTextBoxColumn.HeaderText = "Inception Profit";
+            this.inceptionProfitDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.inceptionProfitDataGridViewTextBoxColumn.Name = "inceptionProfitDataGridViewTextBoxColumn";
+            this.inceptionProfitDataGridViewTextBoxColumn.ReadOnly = true;
+            this.inceptionProfitDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // profitReportBindingSource
+            // 
+            this.profitReportBindingSource.DataSource = typeof(PortfolioTracking.BusinessObjects.ProfitReport);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,9 +383,9 @@
             this.Text = "MainView";
             this.Load += new System.EventHandler(this.MainView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PortfolioProfitGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profitReportBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PortfolioTradeHistoryGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.portfolioTradeHistoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profitReportBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

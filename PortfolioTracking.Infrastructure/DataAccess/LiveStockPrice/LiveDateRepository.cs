@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using PortfolioTracking.Infrastructure.DataAccess.LiveStockPrice.Dto;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Net;
 using System.Net.Http;
 
@@ -12,8 +13,9 @@ namespace PortfolioTracking.Infrastructure.DataAccess.LiveStockPrice
     {
         private static readonly ILog _logger = LogManager.GetLogger(typeof(LiveDataRepository));
 
-        private string ALPHA_VANTAGE_BASE_URL = "https://www.alphavantage.co/query";
-        private string GET_LATEST_PRICE_BY_TICKER = "?function=GLOBAL_QUOTE&symbol={0}&apikey=2UE2F3PIEK3EAKYP";
+        private string ALPHA_VANTAGE_BASE_URL = ConfigurationManager.AppSettings["ALPHA_VANTAGE_BASE_URL"];
+        private string GET_LATEST_PRICE_BY_TICKER = ConfigurationManager.AppSettings["GET_LATEST_PRICE_BY_TICKER"];
+        private long LiveDateCacheIntervalInSecond = int.Parse(ConfigurationManager.AppSettings["LiveDateCacheRefreshIntervalSecond"]);
 
         private Dictionary<string, StockPriceDto> priceCache = new Dictionary<string, StockPriceDto>();
 
@@ -22,7 +24,7 @@ namespace PortfolioTracking.Infrastructure.DataAccess.LiveStockPrice
             try
             {
                 // -- check if we quote the same ticker price in past 30 seconds
-                if (priceCache.ContainsKey(ticker) && DateTime.Now < priceCache[ticker].QuateTime.AddSeconds(30) && priceCache[ticker].LatestPrice.ClosePrice != 0)
+                if (priceCache.ContainsKey(ticker) && DateTime.Now < priceCache[ticker].QuateTime.AddSeconds(LiveDateCacheIntervalInSecond) && priceCache[ticker].LatestPrice.ClosePrice != 0)
                 {
                     _logger.Info($"price is found in the cache: {JsonConvert.SerializeObject(priceCache[ticker])}");
                     return priceCache[ticker];
