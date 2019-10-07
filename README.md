@@ -23,3 +23,10 @@
   
 ## Running the tests
  Unit tests are in Test\ folder
+ 
+## Built With
+* .NET Framework 4.7.2
+* Windows Forms
+* Autofac 4.9.2
+* Entity Framework 6.3.0
+* Log4Net 2.0.8
