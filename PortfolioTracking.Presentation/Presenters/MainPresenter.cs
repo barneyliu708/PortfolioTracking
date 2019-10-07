@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace PortfolioTracking.Presentation.Presenters
 {
-    public class MainPresenter
+    public class MainPresenter : IMainPresenter
     {
         private static readonly ILog _logger = LogManager.GetLogger(typeof(MainPresenter));
 
@@ -26,6 +26,11 @@ namespace PortfolioTracking.Presentation.Presenters
             LoadUserProfile();
 
             _logger.Info($"Main page load successfully");
+        }
+
+        public IMainView GetMainView()
+        {
+            return _mainView;
         }
 
         public void LoadUserProfile()

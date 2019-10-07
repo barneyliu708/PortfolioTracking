@@ -55,7 +55,7 @@ namespace PortfolioTracking.Presentation.Views
         public DateTime SelectedPortfolioWhenCreated
         {
             get { return DateTime.Parse(SelectedPortfolioWhenCreatedLable.Text); }
-            set { SelectedPortfolioWhenCreatedLable.Text = value.ToString("dddd, dd MMMM yyyy"); }
+            set { SelectedPortfolioWhenCreatedLable.Text = value.ToString("MM/dd/yyyy h:mm tt"); }
         }
 
         public void LoadSelectedPortfolioProfits(List<ProfitReport> profits)

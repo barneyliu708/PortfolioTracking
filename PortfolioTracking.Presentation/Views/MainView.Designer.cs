@@ -102,7 +102,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.PortfolioProfitGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.PortfolioProfitGridView.Location = new System.Drawing.Point(172, 126);
+            this.PortfolioProfitGridView.Location = new System.Drawing.Point(187, 126);
             this.PortfolioProfitGridView.Name = "PortfolioProfitGridView";
             this.PortfolioProfitGridView.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -113,7 +113,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.PortfolioProfitGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.PortfolioProfitGridView.Size = new System.Drawing.Size(989, 173);
+            this.PortfolioProfitGridView.Size = new System.Drawing.Size(961, 173);
             this.PortfolioProfitGridView.TabIndex = 0;
             // 
             // PortfolioTradeHistoryGridView
@@ -143,7 +143,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.PortfolioTradeHistoryGridView.DefaultCellStyle = dataGridViewCellStyle5;
-            this.PortfolioTradeHistoryGridView.Location = new System.Drawing.Point(616, 342);
+            this.PortfolioTradeHistoryGridView.Location = new System.Drawing.Point(568, 342);
             this.PortfolioTradeHistoryGridView.Name = "PortfolioTradeHistoryGridView";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
@@ -153,15 +153,15 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.PortfolioTradeHistoryGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.PortfolioTradeHistoryGridView.Size = new System.Drawing.Size(545, 184);
+            this.PortfolioTradeHistoryGridView.Size = new System.Drawing.Size(580, 184);
             this.PortfolioTradeHistoryGridView.TabIndex = 1;
             // 
             // PortfolioListBox
             // 
             this.PortfolioListBox.FormattingEnabled = true;
-            this.PortfolioListBox.Location = new System.Drawing.Point(13, 104);
+            this.PortfolioListBox.Location = new System.Drawing.Point(18, 106);
             this.PortfolioListBox.Name = "PortfolioListBox";
-            this.PortfolioListBox.Size = new System.Drawing.Size(139, 433);
+            this.PortfolioListBox.Size = new System.Drawing.Size(139, 420);
             this.PortfolioListBox.TabIndex = 2;
             this.PortfolioListBox.SelectedValueChanged += new System.EventHandler(this.PortfolioListBox_SelectedValueChanged);
             // 
@@ -180,7 +180,7 @@
             this.SelectedPortfolioNameLable.AutoSize = true;
             this.SelectedPortfolioNameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectedPortfolioNameLable.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SelectedPortfolioNameLable.Location = new System.Drawing.Point(280, 342);
+            this.SelectedPortfolioNameLable.Location = new System.Drawing.Point(295, 342);
             this.SelectedPortfolioNameLable.Name = "SelectedPortfolioNameLable";
             this.SelectedPortfolioNameLable.Size = new System.Drawing.Size(187, 17);
             this.SelectedPortfolioNameLable.TabIndex = 4;
@@ -192,7 +192,7 @@
             this.SelectedPortfolioWhenCreatedLable.AutoSize = true;
             this.SelectedPortfolioWhenCreatedLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectedPortfolioWhenCreatedLable.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SelectedPortfolioWhenCreatedLable.Location = new System.Drawing.Point(237, 390);
+            this.SelectedPortfolioWhenCreatedLable.Location = new System.Drawing.Point(252, 390);
             this.SelectedPortfolioWhenCreatedLable.Name = "SelectedPortfolioWhenCreatedLable";
             this.SelectedPortfolioWhenCreatedLable.Size = new System.Drawing.Size(237, 17);
             this.SelectedPortfolioWhenCreatedLable.TabIndex = 5;
@@ -213,7 +213,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(169, 342);
+            this.label1.Location = new System.Drawing.Point(184, 342);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 17);
             this.label1.TabIndex = 7;
@@ -223,7 +223,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(169, 390);
+            this.label2.Location = new System.Drawing.Point(184, 390);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 8;
@@ -243,7 +243,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(169, 106);
+            this.label4.Location = new System.Drawing.Point(184, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 17);
             this.label4.TabIndex = 10;
@@ -253,7 +253,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(613, 322);
+            this.label5.Location = new System.Drawing.Point(565, 322);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 17);
             this.label5.TabIndex = 11;
