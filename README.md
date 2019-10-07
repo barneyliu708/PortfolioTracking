@@ -1,8 +1,10 @@
 # PortfolioTracking
  This application is used to retrieve the market price and monitor the performance of portfolio
  
+ 
 ## Getting Started
  Please set the project "PortfolioTracking.Presentation" as the startup project
+ 
  
 ## Project Structure
  
@@ -21,8 +23,10 @@
  ### PortfolioTracking.Infrascture
   This is the infrascture layer where manages the data access.
   
+  
 ## Running the tests
  Unit tests are in Test\ folder
+ 
  
 ## Built With
 * .NET Framework 4.7.2
@@ -32,3 +36,7 @@
 * Log4Net 2.0.8
 * NUnit 3.12.0
 * Moq 4.13.0
+
+
+## Authors
+* **Nanke Liu**
