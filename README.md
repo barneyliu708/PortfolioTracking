@@ -30,3 +30,5 @@
 * Autofac 4.9.2
 * Entity Framework 6.3.0
 * Log4Net 2.0.8
+* NUnit 3.12.0
+* Moq 4.13.0
