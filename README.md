@@ -7,6 +7,8 @@
  
  
 ## Project Structure
+
+ ![Structure](https://user-images.githubusercontent.com/23193824/66609200-6c803f80-eb86-11e9-9ddc-08fb67d2f399.png)
  
  ### PortfolioTracking.Presentation
   This is the presentation layer built with Windows Forms.
