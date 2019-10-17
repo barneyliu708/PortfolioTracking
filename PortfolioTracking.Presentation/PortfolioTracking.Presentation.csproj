@@ -88,7 +88,6 @@
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="log4net.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PortfolioTracking.BusinessObjects.PortfolioReport.datasource" />
     <None Include="Properties\DataSources\PortfolioTracking.BusinessObjects.PortfolioTradeHistory.datasource" />

@@ -17,11 +17,11 @@ namespace PortfolioTracking.Presentation.Presenters
 
         public MainPresenter(IMainView mainView, IUserService userService, IPortfolioService portfolioService)
         {
-            this._mainView = mainView;
-            this._userService = userService;
-            this._portfolioService = portfolioService;
+            _mainView = mainView;
+            _userService = userService;
+            _portfolioService = portfolioService;
 
-            this._mainView.OnPortfolioSelected += OnPortfolioSelected;
+            _mainView.OnPortfolioSelected += OnPortfolioSelected;
 
             LoadUserProfile();
 
